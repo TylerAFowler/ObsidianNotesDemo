@@ -14,3 +14,14 @@ resource "oci_objectstorage_bucket" "clips" {
   name           = "roadview-clips"
   versioning     = "Disabled"
 }
+resource "oci_objectstorage_object_lifecycle_policy" "clips" {
+  namespace = var.namespace
+  bucket    = oci_objectstorage_bucket.clips.name
+  rules {
+    name        = "archive-after-90-days"
+    action      = "ARCHIVE"
+    time_amount = 90
+    time_unit   = "DAYS"
+    is_enabled  = true
+  }
+}
