@@ -23,3 +23,4 @@ INSERT = "INSERT INTO crash_stg.crash_2025 VALUES (:1, TO_DATE(:2,'YYYY-MM-DD'),
 
 if __name__ == "__main__":
     main(sys.argv[1])
+# Rows whose CRASH_DATE fails to parse are written to rejects.csv instead of failing the load.
