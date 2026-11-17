@@ -8,3 +8,4 @@ def summary():
     year = int(request.args.get("year", 2024))
     rows = query("summary_by_county.sql", year=year)
     return jsonify(rows)
+YEARS = list(range(2019, 2026))   # 2025 added for the refresh
