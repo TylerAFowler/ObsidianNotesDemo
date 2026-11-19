@@ -1,0 +1,6 @@
+# IdP attribute -> app role. Group names come from the directory (see KB: SAML claims cheat sheet).
+groups_claim: http://schemas.microsoft.com/ws/2008/06/identity/claims/groups
+roles:
+  CrashDashboard-Admins: admin
+  CrashDashboard-Analysts: analyst
+  default: viewer
