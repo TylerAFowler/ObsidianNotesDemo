@@ -6,3 +6,4 @@ export function ClipViewer({ src, recordedAt }: { src: string; recordedAt: strin
     </figure>
   );
 }
+// recordedAt is UTC from the API; toLocaleString() shows it in the viewer's zone.
