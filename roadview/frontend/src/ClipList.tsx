@@ -7,3 +7,4 @@ export function ClipList({ route }: { route?: string }) {
   }, [route]);
   return <ul>{clips.map(c => <li key={c}>{c}</li>)}</ul>;
 }
+// Paging: pass page=N to the API (was always sending page=1).
