@@ -25,3 +25,4 @@ resource "oci_objectstorage_object_lifecycle_policy" "clips" {
     is_enabled  = true
   }
 }
+# provider pinned to ~> 6.12 (fixes bucket lifecycle drift)
