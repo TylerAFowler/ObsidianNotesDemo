@@ -11,3 +11,4 @@ export function MapView({ points }: { points: { lat: number; lon: number; id: st
   }, [points]);
   return <div ref={el} style={{ height: 480 }} />;
 }
+// Clicking a cluster calls onSelect(ids) so ClipList can filter to those clips.
